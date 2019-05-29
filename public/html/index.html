@@ -20,9 +20,9 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="../css/style.css">
 
-    <!-- Kakao PlusFried Chat 
+    <!-- Kakao PlusFried Chat -->
     <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
--->
+
 
 </head>
 
@@ -77,7 +77,7 @@
                             <!-- Register / Login -->
                             <div class="register-login-area">
                                 <a href="#" class="btn">Register</a>
-                                <a href="index-login.html" class="btn active">Login</a>
+                                <a href="#" class="btn active">Login</a>
                             </div>
 
                         </div>
@@ -96,8 +96,8 @@
                 <div class="col-12">
                     <!-- Hero Content -->
                     <div class="hero-content text-center">
-                        <h2>This club will open the door for you</h2>
-                        <a href="courses" class="btn clever-btn">Let's Start</a>
+                        <h2>나에게 맞는 동아리는..?</h2>
+                        <a href="courses" class="btn clever-btn">성향테스트 시작하기</a>
                     </div>
                 </div>
             </div>
@@ -115,7 +115,7 @@
                         <div class="icon">
                             <img src="../img/core-img/docs.png" alt="">
                         </div>
-                        <h2><span class="counter">1912</span></h2>
+                        <h2><span class="counter">68</span></h2>
                         <h5>동 아 리</h5>
                     </div>
                 </div>
@@ -126,7 +126,7 @@
                         <div class="icon">
                             <img src="../img/core-img/star.png" alt="">
                         </div>
-                        <h2><span class="counter">123</span></h2>
+                        <h2><span class="counter">103</span></h2>
                         <h5>소 모 임</h5>
                     </div>
                 </div>
@@ -137,8 +137,8 @@
                         <div class="icon">
                             <img src="../img/core-img/events.png" alt="">
                         </div>
-                        <h2><span class="counter">89</span></h2>
-                        <h5>공 모 전</h5>
+                        <h2><span class="counter">33</span></h2>
+                        <h5>스 터 디</h5>
                     </div>
                 </div>
 
@@ -148,8 +148,8 @@
                         <div class="icon">
                             <img src="../img/core-img/earth.png" alt="">
                         </div>
-                        <h2><span class="counter">56</span></h2>
-                        <h5>스 터 디</h5>
+                        <h2><span class="counter">23</span></h2>
+                        <h5>학 회</h5>
                     </div>
                 </div>
             </div>
@@ -194,7 +194,7 @@
                                 </div>
                             </div>
                             <div class="course-fee h-100">
-                                <a href="#" class="free">Message</a>
+                                <a href="javascript:void plusFriendChat()" class="free">Message</a>
                             </div>
                         </div>
                     </div>
@@ -225,7 +225,7 @@
                                 </div>
                             </div>
                             <div class="course-fee h-100">
-                                <a href="#" class="free">Message</a>
+                                    <a href="javascript:void plusFriendChat()" class="free">Message</a>
                             </div>
                         </div>
                     </div>
@@ -256,7 +256,7 @@
                                 </div>
                             </div>
                             <div class="course-fee h-100">
-                                <a href="#" class="free">Message</a>
+                                <a href="javascript:void plusFriendChat()" class="free">Message</a>
                             </div>
                         </div>
                     </div>
@@ -512,6 +512,29 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="../js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="../js/active.js"></script>
+    <!-- OpenChat js -->
+    <script type='text/javascript'>
+        //<![CDATA[
+            // 사용할 앱의 JavaScript 키를 설정해 주세요.
+            Kakao.init('9852f116cbccc716eda45fdfe2470b0c');
+            // 스토리 공유 버튼을 생성합니다.
+            //Kakao.PlusFriend.createChatButton({
+            //   container: '#plusfriend-chat-button',
+            //    plusFriendId: '_RwuuT'
+                
+                //title: 'consult',
+                //size: 'small',
+                //color: 'yellow',
+                //shape: 'pc',
+                //supportMultipleDensities: true
+            //});
+            //]]>
+            function plusFriendChat(){
+                Kakao.PlusFriend.chat({
+                    plusFriendId: '_RwuuT'
+                });
+            }
+    </script>
 </body>
 
 </html>

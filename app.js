@@ -58,8 +58,8 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + 'public/html/index.html');
 })
 */
-app.listen(8000, (err) => {
+app.listen(8080, (err) => {
   if(!err){
-    console.log('Connected 8000 port!');
+    console.log('Connected 8080 port!');
   }
 })
