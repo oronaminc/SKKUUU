@@ -41,6 +41,90 @@ app.get('/team', function(req, res){
   });
 });
 
+app.get('/single-course1.html', function(req, res){
+  fs.readFile('public/html//single-course1.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.get('/single-course2.html', function(req, res){
+  fs.readFile('public/html//single-course2.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.get('/single-course3.html', function(req, res){
+  fs.readFile('public/html//single-course3.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.get('/single-course4.html', function(req, res){
+  fs.readFile('public/html//single-course4.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.get('/single-course5.html', function(req, res){
+  fs.readFile('public/html//single-course5.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.get('/single-course6.html', function(req, res){
+  fs.readFile('public/html//single-course6.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.get('/single-course7.html', function(req, res){
+  fs.readFile('public/html//single-course7.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.get('/single-course8.html', function(req, res){
+  fs.readFile('public/html//single-course8.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.get('/single-course9.html', function(req, res){
+  fs.readFile('public/html//single-course9.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.get('/single-course10.html', function(req, res){
+  fs.readFile('public/html//single-course10.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.get('/single-course11.html', function(req, res){
+  fs.readFile('public/html//single-course11.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.get('/single-course12.html', function(req, res){
+  fs.readFile('public/html//single-course12.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 /*
