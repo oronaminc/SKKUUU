@@ -5,6 +5,7 @@ var path = require('path');
 
 var publicPath = path.join(__dirname, 'public');
 var app = express();
+
 app.get('/', function(req, res){
   fs.readFile('public/html/index.html', function(error, data){
     res.writeHead(200, {'Content-Type': 'text/html'});
@@ -12,28 +13,51 @@ app.get('/', function(req, res){
   });
 });
 
-//app.use('/api', api); //redirect API calls
-//app.use('/', express.static(__dirname + '/www'));
-//app.use('js', express.static( 'js/boorstrap'));
-//app.use('js', express.static( 'js/jquery'));
-//app.use('css', express.stataic('css'));
-app.use(express.static(path.join(__dirname, 'public')));
-//app.use('/', express.static(__dirname + 'www'));
-//app.use('/js', express.static(__dirname + 'node_modules/bootstrap/dist/js')); // redirect bootstrap JS
-//app.use('/js', express.static(__dirname + 'node_modules/jquery/dist')); // redirect JS jQuery
-//app.use('/css', express.static(__dirname + 'node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
+app.get('/home', function(req, res){
+  fs.readFile('public/html/index.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
 
+app.get('/recommendation', function(req, res){
+  fs.readFile('public/html/courses.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.get('/themes', function(req, res){
+  fs.readFile('public/html/themes.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.get('/team', function(req, res){
+  fs.readFile('public/html/team.html', function(error, data){
+    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.end(data);
+  });
+});
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 /*
-app.listen(8000, function(){
-  console.log("Connected 8000 port!");
-});
+module.exports = funtion(app){
+  app.get('/', function(req, res){
+    res.render('index.html');
+  });
+  app.get('/home', function(req, res){
+    res.render('index.html');
+  });
+}
 */
-
+/*
 app.get('/', (req, res) => {
   res.sendFile(__dirname + 'public/html/index.html');
 })
-
+*/
 app.listen(8000, (err) => {
   if(!err){
     console.log('Connected 8000 port!');
