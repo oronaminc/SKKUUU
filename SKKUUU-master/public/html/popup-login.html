@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>로그인 창</title>
+  <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+  <form method="post" id="authForm" action="https://skkuuuu.appspot.com/auth/login">
+	<div>
+		<label for="loginId">아이디</label>
+		<input type="text" id="loginId" name="loginId" placeholder="ID"> <br/>
+		<label for="loginPw">비밀번호</label>
+		<input type="password" id="loginPw" name="password" placeholder="Password">
+	</div>
+	<button type="submit" disabled="disabled">로그인</button>
+	<div>
+		<input type="checkbox" id="keepLogin" name="keepLogin">
+		<label for="keepLogin"><span>로그인 상태 유지</span></label>
+	</div>
+</form>
+  <!-- 네이버아이디로로그인 버튼 노출 영역 -->
+  <div id="naver_id_login"></div>
+  <!-- //네이버아이디로로그인 버튼 노출 영역 -->
+  <script type="text/javascript">
+  	var naver_id_login = new naver_id_login("YOUR_CLIENT_ID", "YOUR_CALLBACK_URL");
+  	var state = naver_id_login.getUniqState();
+  	naver_id_login.setButton("white", 2,40);
+  	naver_id_login.setDomain("YOUR_SERVICE_URL");
+  	naver_id_login.setState(state);
+  	naver_id_login.setPopup();
+  	naver_id_login.init_naver_id_login();
+  </script>
+</html>
