@@ -5,6 +5,7 @@ var path = require('path');
 
 var publicPath = path.join(__dirname, 'public');
 var app = express();
+app.enable('trust proxy');
 
 app.get('/', function(req, res){
   fs.readFile('public/html/index.html', function(error, data){
